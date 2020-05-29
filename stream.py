@@ -86,6 +86,9 @@ def bbb_browser():
         browser.find_elements_by_id('chat-toggle-button')[0].click()
         browser.find_elements_by_css_selector('button[aria-label="Users and messages toggle"]')[0].click()
         
+    time.sleep(5)
+    browser.find_elements_by_css_selector('button[aria-label="Hide presentation"]')[0].click()
+
     browser.execute_script("document.querySelector('[aria-label=\"Users and messages toggle\"]').style.display='none';")
     browser.execute_script("document.querySelector('[aria-label=\"Options\"]').style.display='none';")
     browser.execute_script("document.querySelector('[aria-label=\"Actions bar\"]').style.display='none';")
